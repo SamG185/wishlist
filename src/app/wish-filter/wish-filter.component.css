@@ -1,0 +1,4 @@
+.wish-filter{
+    display: flexbox;
+    flex-direction: column;
+}

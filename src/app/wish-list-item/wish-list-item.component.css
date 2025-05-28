@@ -1,0 +1,13 @@
+
+.strikeout{
+    text-decoration: line-through;
+}
+
+.color-shift{
+    color: blue;
+}
+
+.removeButton{
+    justify-content: right;
+}
+
