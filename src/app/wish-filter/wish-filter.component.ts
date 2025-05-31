@@ -20,7 +20,7 @@ export class WishFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.updateFilter('0')
+    this.updateFilter(this.listFilter)
   }
 
   listFilter : any = '0';
