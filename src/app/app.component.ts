@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule, NgIfContext } from '@angular/common';
 import { WishItem } from 'src/shared/models/wishItem';
 import { EventService } from './../shared/services/EventService';
-import { WishService } from './wish.service';
+import { WishService } from './wish/wish.service';
 
 @Component({
   selector: 'app-root',

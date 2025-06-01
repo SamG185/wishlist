@@ -8,22 +8,14 @@ import { WishItem } from 'src/shared/models/wishItem';
 })
 export class AddWishFormComponent {
 
-
-
   @Output() addWish = new EventEmitter<WishItem>();
 
   newWishText = '';
-
 
   addNewWish(){
     if(this.newWishText != ''){
       this.addWish.emit(new WishItem(this.newWishText))
       this.newWishText = ''
     }
-    
-
-    
-    
   }
-
 }
