@@ -1,0 +1,34 @@
+<form class="form-outer">
+    <div class="label-section">
+        <Label class="form-label">Your Name</Label>
+        <input
+            type="text"
+            class="form-control"
+            [formControl]="senderNameControl"
+        >
+    </div>
+    <div class="label-section">
+        <Label class="form-label">Your Email Address</Label>
+        <input
+            type="email"
+            class="form-control"
+            [formControl]="senderEmailControl"
+        >
+    </div>
+    <div class="label-section">
+        <Label class="form-label">Message</Label>
+        <textarea
+            rows="3"
+            class="form-control"
+            [formControl]="senderMessageControl"
+        ></textarea>
+    </div>
+    <div class="label-section">
+        <button
+            type="submit"
+            class="submit-button"
+            (click)="$event.preventDefault(); submitForm()"
+        >Send Message</button>
+    </div>
+
+    
