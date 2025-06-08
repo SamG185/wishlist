@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -7,13 +7,15 @@ import { FormControl } from '@angular/forms';
 })
 export class ContactComponent {
 
-  senderNameControl = new FormControl('');
-  senderEmailControl = new FormControl('');
-  senderMessageControl = new FormControl('');
+  contactForm = new FormGroup({
+    senderNameControl: new FormControl('', Validators.required),
+    senderEmailControl: new FormControl('', [Validators.required, Validators.email]),
+    senderMessageControl:  new FormControl('', [Validators.required, Validators.minLength(4)])
+
+  })
+  
 
   submitForm(){
-    if(this.senderNameControl.dirty){
-      alert('Name changed');
-    }
+    console.log('hi')
   }
 }

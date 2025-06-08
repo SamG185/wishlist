@@ -43,3 +43,14 @@
 .submit-button:hover {
     background-color: #0056b3;
 }
+
+.submit-button:disabled{
+    background-color: grey;
+}
+.submit-button:disabled:hover{
+    background-color: rgb(158, 158, 158);
+}
+.validator-text{
+    color: red;
+    font-size: 12px;
+}
