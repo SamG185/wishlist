@@ -26,6 +26,11 @@
             ">
                 Field must be in the following format - example&commat;gmail.com
             </small>
+            <small class="validator-text" *ngIf="contactForm.get('senderEmailControl')?.hasError('invalidEmailDomain')
+            && contactForm.get('senderEmailControl')?.touched
+            ">
+                Domain name not accepted.
+            </small>
         </div>
     </div>
 
@@ -45,8 +50,6 @@
                 Field requires more than 4 characters
             </small>
         </div>
-
-
         <div class="label-section">
             <button type="submit" class="submit-button" [disabled]="contactForm.invalid">Send Message</button>
         </div>
